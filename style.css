@@ -5,6 +5,8 @@
   --green: #49aa26;
   --light-green: #3dd705;
   --red: #e92929;
+  --background-header: #2d4a22;
+  --color-data-table: #969cb3;
 }
 
 * {
@@ -105,13 +107,14 @@ button:hover {
 /*header =======================================*/
 
 header {
-  background: #2d4a22;
+  background: var(--background-header);
   padding: 2rem 0 10rem;
   text-align: center;
 }
 
 #logo {
-  margin-bottom: 1.8rem;
+  margin-top: 0.8rem;
+  margin-bottom: 1.4rem;
 }
 
 /*Balance =======================================*/
@@ -166,7 +169,7 @@ header {
 #data-table {
   width: 100%;
   border-spacing: 0 0.5rem; /*O primeiro valor é referente ao eixo x e o segundo ao eixo y*/
-  color: #969cb3;
+  color: var(--color-data-table);
 }
 
 table thead tr th:first-child,
@@ -267,7 +270,7 @@ input {
   margin-top: 0.8rem;
 }
 
-.input-group small {
+.input-group .help {
   opacity: 0.4;
 }
 
