@@ -1,0 +1,14 @@
+{
+  "name": "discover_devfinaces",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": "https://github.com/martinsgabriel1956/discover_devfinaces.git",
+  "author": "Gabriel Martins <martinsgabriel1956@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^12.0.2"
+  }
+}
