@@ -36,7 +36,7 @@ O dev.finances é uma aplicação de controle financeiro, onde é possível cada
 
   npm i # Ou install
   # ou
-  yarn # Ou yarn add
+  yarn # Ou yarn install
 
   # Iniciar aplicação
   
