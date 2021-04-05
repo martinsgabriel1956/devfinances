@@ -1,24 +1,23 @@
-const body = document.querySelector('body')
-const header = document.querySelector('header');
-const cardTotal = document.querySelector('div.total');
-const modalTitle = document.querySelector('#form h2');
-const helpNotification = document.querySelector('.help')
-const footer = document.querySelector('footer p');
-
-const toggleBtn = document.querySelector('input[name=theme]');
+const elements = {
+  body: document.querySelector('body'),
+  header: document.querySelector('header'),
+  cardTotal: document.querySelector('div.total'),
+  modalTitle: document.querySelector('#form h2'),
+  helpNotification: document.querySelector('.help'),
+  footer: document.querySelector('footer p'),
+  toggleBtn: document.querySelector('input[name=theme]'),
+}
 
 const getStyle = (element, style) => getComputedStyle(element).getPropertyValue(style);
 
 const initialPalletColors = {
-  backgroundHeader: getStyle(header, "--background-header"),
-  bg: getStyle(body, "--bg"),
-  cardBg: getStyle(cardTotal, "--card-bg"),
-  footerText: getStyle(footer, "--footer-text"),
-  modalTitle: getStyle(modalTitle, "--modal-title"),
-  helpText: getStyle(helpNotification, "--help-text"),
+  backgroundHeader: getStyle(elements.header, "--background-header"),
+  bg: getStyle(elements.body, "--bg"),
+  cardBg: getStyle(elements.cardTotal, "--card-bg"),
+  footerText: getStyle(elements.footer, "--footer-text"),
+  modalTitle: getStyle(elements.modalTitle, "--modal-title"),
+  helpText: getStyle(elements.helpNotification, "--help-text"),
 }
-
-console.log(helpNotification);
 
 const darkModePallet = {
   backgroundHeader: "#D47E1C",
@@ -33,10 +32,10 @@ const transformKey = key => "--" + key.replace(/([A-Z])/, "-$1").toLowerCase();
 
 const changeColors = colors => {
   Object.keys(colors).map(key => {
-    body.style.setProperty(transformKey(key), colors[key]);
+    elements.body.style.setProperty(transformKey(key), colors[key]);
   })
 }
 
-toggleBtn.addEventListener('change', ({ target }) => {
+elements.toggleBtn.addEventListener('change', ({ target }) => {
   target.checked ? changeColors(darkModePallet) : changeColors(initialPalletColors);
 })
