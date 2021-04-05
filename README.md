@@ -26,6 +26,25 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 O dev.finances é uma aplicação de controle financeiro, onde é possível cadastrar e excluir transações e ver o saldo de entrada e saída 💰
 
+## 🎲 Versão Aplicação Desktop (Electron)
+
+```bash
+  # Clone o repositório
+  git clone git@github.com:martinsgabriel1956/discover_devfinaces.git
+
+  # Instalar a dependência
+
+  npm i # Ou install
+  # ou
+  yarn # Ou yarn add
+
+  # Iniciar aplicação
+  
+  npm run start
+    # ou
+  yarn start 
+```
+
 ## :memo: Licença
 
 Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE.md) para mais detalhes.
