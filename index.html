@@ -44,14 +44,20 @@
       </section>
       <section id="transaction">
         <h2 class="sr-only">Transações:</h2>
+        <div class="buttons-transaction">
+          <a 
+            href="#" 
+            class="button new"
+            onClick="Modal.open()"
+          >
+            + Nova Transação
+          </a>
 
-        <a 
-          href="#" 
-          class="button new"
-          onClick="Modal.open()"
-        >
-          + Nova Transação
-        </a>
+          <div class="switch-theme">
+            <input type="checkbox" id="switch" name="theme">
+            <label for="switch">Toggle</label>
+          </div>
+        </div>
 
         <table id="data-table">
           <thead>
@@ -122,5 +128,6 @@
     </footer>
 
     <script src="./public/scripts/main.js"></script>
+    <script src="./public/scripts/switch-theme.js"></script>
   </body>
 </html>

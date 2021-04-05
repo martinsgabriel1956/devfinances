@@ -1,7 +1,11 @@
 :root {
-  --dark-blue: #363f5f;
-  --ice: #f0f2f5;
+  --dark-text: #363f5f;
+  --footer-text: #363f5f;
+  --modal-title: #363f5f;
+  --help-text: #000;
+  --bg: #f0f2f5;
   --white: #fff;
+  --card-bg: #49aa26;
   --green: #49aa26;
   --light-green: #3dd705;
   --red: #e92929;
@@ -20,7 +24,7 @@ html {
 }
 
 body {
-  background: var(--ice);
+  background: var(--bg);
   font-family: "Poppins", sans-serif;
 }
 
@@ -45,7 +49,7 @@ body {
 
 h2 {
   margin: 3.2rem 0 0.8rem;
-  color: var(--dark-blue);
+  color: var(--dark-text);
 
   font-weight: normal;
 }
@@ -135,7 +139,7 @@ header {
   border-radius: 0.25rem;
 
   margin-bottom: 2rem;
-  color: var(--dark-blue);
+  color: var(--dark-text);
 }
 
 .card h3 {
@@ -153,17 +157,65 @@ header {
   margin-top: 1rem;
 }
 
-.card.total {
-  background: var(--green);
+.total {
+  background: var(--card-bg);
   color: var(--white);
+}
+
+/*Switch Theme =======================================*/
+.buttons-transaction {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+input[type=checkbox]{
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+
+label {
+  cursor: pointer;
+  text-indent: -9999px;
+  top: -5px;
+  width: 48px;
+  height: 24px;
+  background: grey;
+  float: right;
+  border-radius: 100px;
+  position: relative;
+}
+
+label::after{
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 18px;
+  height: 18px;
+  background-color: white;
+  border-radius: 90px;
+  transition: 0.3s;
+}
+
+input:checked + label {
+  background-color: var(--light-green);
+}
+
+input:checked + label::after {
+  left: calc(100% - 3px);
+  transform: translateX(-100%);
 }
 
 /*Table =======================================*/
 
 #transaction {
   display: block;
-  overflow-x: auto;
   width: 100%;
+  overflow-x: auto;
+  
 }
 
 #data-table {
@@ -204,7 +256,7 @@ table tbody td {
 }
 
 td.description {
-  color: var(--dark-blue);
+  color: var(--dark-text);
 }
 
 td.income {
@@ -240,7 +292,7 @@ td.expense {
 }
 
 .modal {
-  background: var(--ice);
+  background: var(--bg);
   padding: 2.4rem;
   width: 85%;
   max-width: 500px;
@@ -256,6 +308,7 @@ td.expense {
 
 #form h2 {
   margin-top: 0;
+  color: var(--modal-title);
 }
 
 input {
@@ -272,6 +325,7 @@ input {
 
 .input-group .help {
   opacity: 0.4;
+  color: var(--help-text);
 }
 
 .input-group.actions {
@@ -289,7 +343,7 @@ input {
 footer {
   text-align: center;
   padding: 4rem 0 2rem;
-  color: var(--dark-blue);
+  color: var(--footer-text);
 
   opacity: 0.6;
 }
