@@ -1,11 +1,8 @@
 :root {
   --dark-text: #363f5f;
-  --footer-text: #363f5f;
-  --modal-title: #363f5f;
   --help-text: #000;
   --bg: #f0f2f5;
   --white: #fff;
-  --card-bg: #49aa26;
   --green: #49aa26;
   --light-green: #3dd705;
   --red: #e92929;
@@ -146,9 +143,20 @@ header {
   font-weight: normal;
   font-size: 1rem;
 
+
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.card h3,
+#incomeDisplay,
+#expenseDisplay {
+  color: #000;
+}
+
+.card .total-title {
+  color: var(--white);
 }
 
 .card p {
@@ -158,7 +166,7 @@ header {
 }
 
 .total {
-  background: var(--card-bg);
+  background: var(--green);
   color: var(--white);
 }
 
@@ -308,7 +316,7 @@ td.expense {
 
 #form h2 {
   margin-top: 0;
-  color: var(--modal-title);
+  color: var(--dark-text);
 }
 
 input {
@@ -325,7 +333,6 @@ input {
 
 .input-group .help {
   opacity: 0.4;
-  color: var(--help-text);
 }
 
 .input-group.actions {
@@ -343,7 +350,7 @@ input {
 footer {
   text-align: center;
   padding: 4rem 0 2rem;
-  color: var(--footer-text);
+  color: var(--dark-text);
 
   opacity: 0.6;
 }
@@ -360,4 +367,11 @@ footer {
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
   }
+}
+
+.darkmode {
+  --background-header: #D47E1C;
+  --bg: #4e4e4e;
+  --green: #9466FF;
+  --dark-text: #E5E5E5;
 }
